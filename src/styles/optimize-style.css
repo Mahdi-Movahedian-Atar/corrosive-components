@@ -1,43 +1,43 @@
 /* Define common variables */
 :root {
-    --primary: var(--primary-0);
-    --secondary: var(--secondary-0);
-    --accent: var(--accent-0);
-    --success: var(--success-0);
-    --error: var(--error-0);
-    --warning: var(--warning-0);
-    --tertiary: var(--tertiary-0);
-    --width: 2px;
-    --corner: 4px;
-    --small-icon: 16px;
-    --medium-icon: 24px;
-    --large-icon: 32px;
+  --primary: var(--primary-0);
+  --secondary: var(--secondary-0);
+  --accent: var(--accent-0);
+  --success: var(--success-0);
+  --error: var(--error-0);
+  --warning: var(--warning-0);
+  --tertiary: var(--tertiary-0);
+  --width: 2px;
+  --corner: 4px;
+  --small-icon: 16px;
+  --medium-icon: 24px;
+  --large-icon: 32px;
 }
 
 body {
-    background: var(--secondary);
-    color: var(--primary);
-    transition: all ease-in-out;
+  background: var(--secondary);
+  color: var(--primary);
+  transition: all ease-in-out;
 }
 
 ::selection {
-    background: var(--accent);
+  background: var(--accent);
 }
 
 /* Define common button styles */
 .cc-button,
 .cc-button-rounded,
 .cc-button-raised {
-    border-radius: var(--corner);
-    cursor: pointer;
+  border-radius: var(--corner);
+  cursor: pointer;
 }
 
 .cc-button-rounded {
-    border-radius: 100%;
+  border-radius: 100%;
 }
 
 .cc-button-raised {
-    box-shadow: 0 var(--width) var(--width) var(--secondary);
+  box-shadow: 0 var(--width) var(--width) var(--secondary);
 }
 
 /* Define button states */
@@ -71,75 +71,75 @@ body {
 .cc-buttonGroup-outlined button,
 .cc-buttonGroup-outlined button:hover,
 .cc-buttonGroup-outlined button:active {
-    border: unset;
+  border: unset;
 }
 
 /* Define button text and solid styles */
 .cc-button-text,
 .cc-buttonGroup-text button {
-    background: unset;
+  background: unset;
 }
 
 .cc-button-solid,
 .cc-buttonGroup-solid button {
-    color: var(--secondary);
+  color: var(--secondary);
 }
 
 /* Define button outlined styles */
 .cc-button-outlined,
 .cc-buttonGroup-outlined button {
-    border-style: solid;
-    border-width: var(--width);
-    background: unset;
+  border-style: solid;
+  border-width: var(--width);
+  background: unset;
 }
 
 /* Define button disabled state */
 .cc-button-disabled,
 .cc-buttonGroup-content-disabled {
-    background: var(--tertiary);
-    border: var(--tertiary);
-    color: var(--tertiary);
-    cursor: auto;
+  background: var(--tertiary);
+  border: var(--tertiary);
+  color: var(--tertiary);
+  cursor: auto;
 }
 
 /* Define resizable panels */
 .cc-resizablePanels-parent,
 .cc-resizablePanels-parent-vertical {
-    display: flex;
-    overflow: hidden;
-    height: 100%;
+  display: flex;
+  overflow: hidden;
+  height: 100%;
 }
 
 .cc-resizablePanels-disabled,
 .cc-resizablePanels-vertical-disabled {
-    background: var(--tertiary);
+  background: var(--tertiary);
 }
 
 .cc-resizablePanels-draggable,
 .cc-resizablePanels-draggable-vertical {
-    background: var(--primary);
+  background: var(--primary);
 }
 
 .cc-resizablePanels-content,
 .cc-resizablePanels-content-vertical {
-    background: var(--secondary);
-    flex-grow: 0;
-    flex-shrink: 0;
-    align-self: center;
-    justify-self: center;
-    border: none;
-    border-radius: var(--width);
+  background: var(--secondary);
+  flex-grow: 0;
+  flex-shrink: 0;
+  align-self: center;
+  justify-self: center;
+  border: none;
+  border-radius: var(--width);
 }
 
 .cc-resizablePanels-firstPanel,
 .cc-resizablePanels-secondPanel {
-    background-color: var(--secondary);
-    display: flex;
+  background-color: var(--secondary);
+  display: flex;
 }
 
 /* Define treeView */
 .cc-treeNode:hover {
-    background: var(--accent);
+  background: var(--accent);
 }
 
 /* Define icons */
@@ -150,33 +150,33 @@ body {
 .cc-icon-small,
 .cc-icon-medium,
 .cc-icon-large {
-    background: var(--primary);
-    mask: url('../icons/ShortArrow.svg');
+  background: var(--primary);
+  mask: url("../icons/ShortArrow.svg");
 }
 
 .cc-shortArrow-right {
-    rotate: -90deg;
+  rotate: -90deg;
 }
 
 .cc-shortArrow-left {
-    rotate: 90deg;
+  rotate: 90deg;
 }
 
 .cc-shortArrow-up {
-    rotate: 180deg;
+  rotate: 180deg;
 }
 
 .cc-icon-small {
-    width: var(--small-icon);
-    height: var(--small-icon);
+  width: var(--small-icon);
+  height: var(--small-icon);
 }
 
 .cc-icon-medium {
-    width: var(--medium-icon);
-    height: var(--medium-icon);
+  width: var(--medium-icon);
+  height: var(--medium-icon);
 }
 
 .cc-icon-large {
-    width: var(--large-icon);
-    height: var(--large-icon);
+  width: var(--large-icon);
+  height: var(--large-icon);
 }

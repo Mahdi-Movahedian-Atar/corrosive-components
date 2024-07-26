@@ -1,6 +1,6 @@
 {
-  "name": "my-qwik-library-name",
-  "version": "0.0.1",
+  "name": "corrosive-components",
+  "version": "0.1.0",
   "description": "Create a Qwik library",
   "main": "./lib/index.qwik.mjs",
   "qwik": "./lib/index.qwik.mjs",

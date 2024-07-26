@@ -1,43 +1,49 @@
-import type { Meta, StoryObj } from 'storybook-framework-qwik'
-import { Toggle, type ToggleProps } from './toggle'
-import { $ } from '@builder.io/qwik'
+import type { Meta, StoryObj } from "storybook-framework-qwik";
+import { Toggle, type ToggleProps } from "./toggle";
+import { $ } from "@builder.io/qwik";
 
 const meta: Meta<ToggleProps> = {
-    component: Toggle,
-}
+  component: Toggle,
+};
 
-type Story = StoryObj<ToggleProps>
+type Story = StoryObj<ToggleProps>;
 
-export default meta
+export default meta;
 
 export const Primary: Story = {
-    args: {
-        disabled: false,
-        value: false,
-        variant: 'slider',
-        color: 'primary',
-        className: '',
-        style: {
-            height: '100%',
-            width: '100%',
-        },
-        onChange: $((value) => {
-            console.log(value)
-        }),
+  args: {
+    disabled: false,
+    value: false,
+    variant: "slider",
+    color: "primary",
+    class: "",
+    size: 50,
+    sizeType: "px",
+    style: {
+      height: "100%",
+      width: "100%",
     },
-    argTypes: {
-        variant: {
-            options: ['slider', 'radio', 'checkbox'],
-            control: { type: 'radio' },
-        },
-        color: {
-            options: ['success', 'error', 'warning', 'accent', 'primary'],
-            control: { type: 'radio' },
-        },
+    onChange: $((value) => {
+      console.log(value);
+    }),
+  },
+  argTypes: {
+    variant: {
+      options: ["slider", "radio", "checkbox"],
+      control: { type: "radio" },
     },
-    render: (props) => (
-        <Toggle {...props}>
-            <h1>Buttom</h1>
-        </Toggle>
-    ),
-}
+    color: {
+      options: ["success", "error", "warning", "accent", "primary"],
+      control: { type: "radio" },
+    },
+    sizeType: {
+      options: ["rem", "rm", "px"],
+      control: { type: "radio" },
+    },
+  },
+  render: (props) => (
+    <Toggle {...props}>
+      <h1>Buttom</h1>
+    </Toggle>
+  ),
+};
