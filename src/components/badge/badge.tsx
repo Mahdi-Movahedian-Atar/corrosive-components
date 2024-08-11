@@ -1,14 +1,14 @@
-import { component$, CSSProperties, Slot } from "@builder.io/qwik";
+import { component$, CSSProperties, Slot } from '@builder.io/qwik'
 
 export interface BadgeProps {
-  class?: string;
-  style?: CSSProperties;
-  size?: number;
-  sizeType?: "rem" | "rm" | "px" | string;
-  position?: "top-right" | "top-left" | "bottom-right" | "bottom-left";
-  shape?: "circle" | "square" | number;
-  variant?: "solid" | "outlined" | "text";
-  color?: "success" | "error" | "warning" | "accent" | "primary";
+  class?: string
+  style?: CSSProperties
+  size?: number
+  sizeType?: 'rem' | 'rm' | 'px' | string
+  position?: 'top-right' | 'top-left' | 'bottom-right' | 'bottom-left'
+  shape?: 'circle' | 'square' | number
+  variant?: 'solid' | 'outlined' | 'text'
+  color?: 'success' | 'error' | 'warning' | 'accent' | 'primary'
 }
 export const Badge = component$<BadgeProps>(
   ({
@@ -18,23 +18,23 @@ export const Badge = component$<BadgeProps>(
       width: 0,
     },
     size = 15,
-    sizeType = "px",
-    shape = "circle",
-    position = "top-right",
-    variant = "solid",
-    color = "primary",
+    sizeType = 'px',
+    shape = 'circle',
+    position = 'top-right',
+    variant = 'solid',
+    color = 'primary',
   }) => {
     const thisStyles = {
-      "font-size": size.toString() + sizeType,
-      width: "fit-content",
-      height: "fit-content",
+      'font-size': size.toString() + sizeType,
+      width: 'fit-content',
+      height: 'fit-content',
       borderRadius:
-        shape === "circle"
-          ? "50vmax"
-          : shape === "square"
-            ? "0%"
-            : shape.toString() + "vmax",
-    };
+        shape === 'circle'
+          ? '50vmax'
+          : shape === 'square'
+            ? '0%'
+            : shape.toString() + 'vmax',
+    }
 
     return (
       <div class={className} style={style}>
@@ -45,6 +45,6 @@ export const Badge = component$<BadgeProps>(
           <Slot />
         </span>
       </div>
-    );
-  },
-);
+    )
+  }
+)

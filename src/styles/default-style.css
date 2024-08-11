@@ -4,6 +4,7 @@ body {
 }
 ::selection {
   background: var(--accent-0);
+  color: var(--primary-0);
 }
 ::selection:focus {
   background: var(--accent-0);
@@ -174,7 +175,7 @@ body {
 
 .cc-toggle-radio span:after,
 .cc-toggle-radio:hover span:after {
-  content: "";
+  content: '';
   position: absolute;
   display: none;
 }
@@ -222,7 +223,7 @@ body {
 }
 
 .cc-toggle-checkbox span:after {
-  content: "";
+  content: '';
   position: absolute;
   display: none;
 }
@@ -236,7 +237,7 @@ body {
   margin: 10%;
   width: 80%;
   height: 80%;
-  mask: url("../icons/Check.svg");
+  mask: url('../icons/Check.svg');
 }
 
 .cc-toggle-slider {
@@ -275,7 +276,7 @@ body {
 .cc-toggle-slider span:after,
 .cc-toggle-slider:hover span:after {
   position: absolute;
-  content: "";
+  content: '';
   height: 200%;
   width: 50%;
   transform: translateY(-25%);
@@ -1825,6 +1826,11 @@ textarea:placeholder-shown ~ .cc-textarea-label {
   flex-wrap: nowrap;
 }
 
+.cc-buttonGroup button,
+.cc-buttonGroup-rounded button {
+  width: 100%;
+}
+
 .cc-buttonGroup {
   border-radius: var(--corner);
 }
@@ -2253,7 +2259,7 @@ textarea:placeholder-shown ~ .cc-textarea-label {
   border: unset;
 }
 
-/* ==========================badge========================== */
+/* ==========================divider========================== */
 
 .cc-divider {
   border: solid var(--width);
@@ -2317,11 +2323,11 @@ textarea:placeholder-shown ~ .cc-textarea-label {
 .cc-divider-panel:last-child {
   border-left: double currentColor var(--width);
 }
-.cc-divider-vertical .cc-divider-panel:first-child {
+.cc-divider-vertical > .cc-divider-panel:first-child {
   border-right: none;
   border-bottom: double currentColor var(--width);
 }
-.cc-divider-vertical .cc-divider-panel:last-child {
+.cc-divider-vertical > .cc-divider-panel:last-child {
   border-left: none;
   border-top: double currentColor var(--width);
 }
@@ -2440,7 +2446,7 @@ textarea:placeholder-shown ~ .cc-textarea-label {
 }
 
 .cc-tooltip::after {
-  content: "";
+  content: '';
   position: absolute;
   border: 0.5rem solid transparent;
   border-radius: var(--corner);
@@ -2564,6 +2570,10 @@ textarea:placeholder-shown ~ .cc-textarea-label {
   cursor: pointer;
 }
 
+.cc-treeNode-content {
+  cursor: pointer;
+}
+
 /* ==========================toast========================== */
 
 .cc-toast-container {
@@ -2572,6 +2582,7 @@ textarea:placeholder-shown ~ .cc-textarea-label {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  z-index: 99999;
 }
 
 .cc-toast {
@@ -2663,7 +2674,6 @@ textarea:placeholder-shown ~ .cc-textarea-label {
 }
 .cc-scrollPanel-bar-v {
   width: 1rem;
-  height: 100%;
 }
 .cc-scrollPanel-bar-h {
   height: 1rem;
@@ -2854,7 +2864,7 @@ textarea:placeholder-shown ~ .cc-textarea-label {
 }
 
 .cc-progress-circular > text {
-  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
   transform-origin: 50% 50%;
   transform: rotate(90deg);
   stroke: transparent;
@@ -2970,7 +2980,7 @@ textarea:placeholder-shown ~ .cc-textarea-label {
 .cc-skeleton-wave::after,
 .cc-skeleton-pulse::after {
   display: inline-block;
-  content: "";
+  content: '';
   width: 200%;
   height: 100%;
 }
@@ -2992,42 +3002,42 @@ textarea:placeholder-shown ~ .cc-textarea-label {
 /* ==========================icons========================== */
 
 .cc-shortArrow-down {
-  mask: url("../icons/ShortArrow.svg");
+  mask: url('../icons/ShortArrow.svg');
 }
 
 .cc-shortArrow-right {
   rotate: -90deg;
-  mask: url("../icons/ShortArrow.svg");
+  mask: url('../icons/ShortArrow.svg');
 }
 
 .cc-shortArrow-left {
   rotate: 90deg;
-  mask: url("../icons/ShortArrow.svg");
+  mask: url('../icons/ShortArrow.svg');
 }
 
 .cc-shortArrow-up {
   rotate: 180deg;
-  mask: url("../icons/ShortArrow.svg");
+  mask: url('../icons/ShortArrow.svg');
 }
 
 .cc-error {
-  mask: url("../icons/Error.svg");
+  mask: url('../icons/Error.svg');
 }
 
 .cc-cross {
-  mask: url("../icons/Cross.svg");
+  mask: url('../icons/Cross.svg');
 }
 
 .cc-info {
-  mask: url("../icons/Information.svg");
+  mask: url('../icons/Information.svg');
 }
 
 .cc-success {
-  mask: url("../icons/Success.svg");
+  mask: url('../icons/Success.svg');
 }
 
 .cc-warning {
-  mask: url("../icons/Warning.svg");
+  mask: url('../icons/Warning.svg');
 }
 
 .cc-icon-small,

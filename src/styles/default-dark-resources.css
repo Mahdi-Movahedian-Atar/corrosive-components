@@ -1,13 +1,13 @@
 :root {
-  --primary-0: #000000;
-  --primary-1: #252525;
-  --primary-2: #3b3b3b;
-  --secondary-0: #ffffff;
-  --secondary-1: #d7d7d7;
-  --secondary-2: #afafaf;
+  --primary-0: #ffffff;
+  --primary-1: #d7d7d7;
+  --primary-2: #afafaf;
+  --secondary-0: #000000;
+  --secondary-1: #252525;
+  --secondary-2: #3b3b3b;
   --tertiary-0: #838383;
-  --tertiary-1: #656565;
-  --tertiary-2: #989898;
+  --tertiary-1: #989898;
+  --tertiary-2: #656565;
 
   --accent-0: #ff6a00;
   --accent-1: #803500;

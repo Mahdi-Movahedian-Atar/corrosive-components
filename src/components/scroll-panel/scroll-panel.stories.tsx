@@ -1,34 +1,34 @@
-import type { Meta, StoryObj } from "storybook-framework-qwik";
-import { ScrollPanel, ScrollPanelProps } from "./scroll-panel";
+import type { Meta, StoryObj } from 'storybook-framework-qwik'
+import { ScrollPanel, ScrollPanelProps } from './scroll-panel'
 
 const meta: Meta<ScrollPanelProps> = {
   component: ScrollPanel,
-};
+}
 
-type Story = StoryObj<ScrollPanelProps>;
+type Story = StoryObj<ScrollPanelProps>
 
-export default meta;
+export default meta
 
 export const Primary: Story = {
   args: {
-    color: "primary",
-    style: { height: "500px", width: "500px" },
-    direction: "both",
+    color: 'primary',
+    style: { height: '500px', width: '500px' },
+    direction: 'both',
     class: undefined,
   },
   argTypes: {
     color: {
-      options: ["success", "error", "warning", "accent", "primary"],
-      control: { type: "radio" },
+      options: ['success', 'error', 'warning', 'accent', 'primary'],
+      control: { type: 'radio' },
     },
     direction: {
-      options: ["vertical", "horizontal", "both"],
-      control: { type: "radio" },
+      options: ['vertical', 'horizontal', 'both'],
+      control: { type: 'radio' },
     },
   },
   render: (props) => (
     <ScrollPanel {...props}>
-      <p style={{ width: "1000px" }}>
+      <p style={{ width: '10000px' }}>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
         veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
@@ -138,4 +138,4 @@ export const Primary: Story = {
       </p>
     </ScrollPanel>
   ),
-};
+}

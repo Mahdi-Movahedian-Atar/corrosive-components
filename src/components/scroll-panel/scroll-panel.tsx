@@ -5,31 +5,31 @@ import {
   useSignal,
   $,
   useStore,
-  useTask$,
-} from "@builder.io/qwik";
+  useVisibleTask$,
+} from '@builder.io/qwik'
 
 export interface ScrollPanelProps {
-  class?: string;
-  style?: CSSProperties;
-  color?: "success" | "error" | "warning" | "accent" | "primary";
-  direction?: "vertical" | "horizontal" | "both";
+  class?: string
+  style?: CSSProperties
+  color?: 'success' | 'error' | 'warning' | 'accent' | 'primary'
+  direction?: 'vertical' | 'horizontal' | 'both'
 }
 
 export const ScrollPanel = component$<ScrollPanelProps>(
   ({
     class: className = undefined,
-    style = { height: "100%", width: "100%" },
-    color = "primary",
-    direction = "both",
+    style,
+    color = 'primary',
+    direction = 'both',
   }) => {
-    const ref = useSignal<Element>();
+    const ref = useSignal<Element>()
 
-    const vertical = useStore([0, 0]);
-    const horizontal = useStore([0, 0]);
-    const start = useStore([0, 0]);
+    const vertical = useStore([0, 0])
+    const horizontal = useStore([0, 0])
+    const start = useStore([0, 0])
 
-    const isVerticalActive = useSignal(false);
-    const isHorizontalActive = useSignal(false);
+    const isVerticalActive = useSignal(false)
+    const isHorizontalActive = useSignal(false)
 
     const onScroll = $(() => {
       const {
@@ -39,51 +39,51 @@ export const ScrollPanel = component$<ScrollPanelProps>(
         scrollLeft,
         scrollWidth,
         clientWidth,
-      } = ref.value as HTMLDivElement;
-      vertical[0] = clientHeight / scrollHeight;
-      vertical[1] = scrollTop / (scrollHeight - clientHeight);
-      horizontal[0] = clientWidth / scrollWidth;
-      horizontal[1] = scrollLeft / (scrollWidth - clientWidth);
-    });
+      } = ref.value as HTMLDivElement
+      vertical[0] = clientHeight / scrollHeight
+      vertical[1] = scrollTop / (scrollHeight - clientHeight)
+      horizontal[0] = clientWidth / scrollWidth
+      horizontal[1] = scrollLeft / (scrollWidth - clientWidth)
+    })
 
     const manualScroll = $((e: MouseEvent | TouchEvent) => {
       if (isVerticalActive.value) {
         let deltaY =
-          ("clientY" in e ? e.clientY : e.touches[0].clientY) - start[0];
-        deltaY /= vertical[0];
-        (ref.value as HTMLDivElement).scrollBy({
+          ('clientY' in e ? e.clientY : e.touches[0].clientY) - start[0]
+        deltaY /= vertical[0]
+        ;(ref.value as HTMLDivElement).scrollBy({
           top: deltaY,
-          behavior: "instant",
-        });
-        start[0] = "clientY" in e ? e.clientY : e.touches[0].clientY;
+          behavior: 'instant',
+        })
+        start[0] = 'clientY' in e ? e.clientY : e.touches[0].clientY
       }
       if (isHorizontalActive.value) {
         let deltaX =
-          ("clientX" in e ? e.clientX : e.touches[0].clientX) - start[1];
-        deltaX /= horizontal[0];
-        (ref.value as HTMLDivElement).scrollBy({
+          ('clientX' in e ? e.clientX : e.touches[0].clientX) - start[1]
+        deltaX /= horizontal[0]
+        ;(ref.value as HTMLDivElement).scrollBy({
           left: deltaX,
-          behavior: "instant",
-        });
-        start[1] = "clientX" in e ? e.clientX : e.touches[0].clientX;
+          behavior: 'instant',
+        })
+        start[1] = 'clientX' in e ? e.clientX : e.touches[0].clientX
       }
-    });
+    })
 
     const activeHorizontal = $((e: MouseEvent | TouchEvent) => {
-      isHorizontalActive.value = true;
-      start[1] = "clientX" in e ? e.clientX : e.touches[0].clientX;
-    });
-    const deActiveHorizontal = $(() => (isHorizontalActive.value = false));
+      isHorizontalActive.value = true
+      start[1] = 'clientX' in e ? e.clientX : e.touches[0].clientX
+    })
+    const deActiveHorizontal = $(() => (isHorizontalActive.value = false))
     const activeVertical = $((e: MouseEvent | TouchEvent) => {
-      isVerticalActive.value = true;
-      start[0] = "clientY" in e ? e.clientY : e.touches[0].clientY;
-    });
-    const deActiveVertical = $(() => (isVerticalActive.value = false));
+      isVerticalActive.value = true
+      start[0] = 'clientY' in e ? e.clientY : e.touches[0].clientY
+    })
+    const deActiveVertical = $(() => (isVerticalActive.value = false))
 
-    useTask$(({ track }) => {
-      track(() => ref.value);
-      onScroll();
-    });
+    useVisibleTask$(({ track }) => {
+      track(() => ref.value)
+      onScroll()
+    })
 
     return (
       <div class={className} style={style}>
@@ -93,14 +93,14 @@ export const ScrollPanel = component$<ScrollPanelProps>(
               ref={ref}
               class={`cc-scrollPanel-wrapper`}
               style={{
-                overflowX: direction != "vertical" ? "scroll" : "hidden",
-                overflowY: direction != "horizontal" ? "scroll" : "hidden",
+                overflowX: direction != 'vertical' ? 'scroll' : 'hidden',
+                overflowY: direction != 'horizontal' ? 'scroll' : 'hidden',
               }}
               onScroll$={onScroll}
             >
               <Slot />
             </div>
-            {direction != "horizontal" && (
+            {direction != 'horizontal' && (
               <div
                 onMouseMove$={manualScroll}
                 onMouseDown$={activeVertical}
@@ -120,7 +120,7 @@ export const ScrollPanel = component$<ScrollPanelProps>(
               </div>
             )}
           </div>
-          {direction != "vertical" && (
+          {direction != 'vertical' && (
             <div
               onMouseMove$={manualScroll}
               onMouseDown$={activeHorizontal}
@@ -141,6 +141,6 @@ export const ScrollPanel = component$<ScrollPanelProps>(
           )}
         </div>
       </div>
-    );
-  },
-);
+    )
+  }
+)

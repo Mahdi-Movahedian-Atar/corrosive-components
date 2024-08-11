@@ -7,5 +7,5 @@ export default () => {
       </head>
       <body></body>
     </>
-  );
-};
+  )
+}

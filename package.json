@@ -1,7 +1,8 @@
 {
   "name": "corrosive-components",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Create a Qwik library",
+  "license": "MIT",
   "main": "./lib/index.qwik.mjs",
   "qwik": "./lib/index.qwik.mjs",
   "types": "./lib-types/index.d.ts",
@@ -59,5 +60,8 @@
     "undici": "*",
     "vite": "^5.2.10",
     "vite-tsconfig-paths": "^4.2.1"
+  },
+  "dependencies": {
+    "prettier-plugin-tailwindcss": "^0.6.5"
   }
 }

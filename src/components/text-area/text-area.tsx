@@ -5,78 +5,75 @@ import {
   QRL,
   Slot,
   useSignal,
-} from "@builder.io/qwik";
+} from '@builder.io/qwik'
 
 export interface TextAreaProps {
-  value?: string;
-  class?: string;
-  disabled?: boolean;
-  cols?: number;
-  rows?: number;
-  resize?: "horizontal" | "vertical" | "both" | "none";
-  maxLength?: number;
-  style?: CSSProperties;
-  color?: "success" | "error" | "warning" | "accent" | "primary";
-  variant?: "solid" | "outlined" | "text";
-  rounded?: boolean;
-  onChange?: QRL<(value: string | undefined) => void>;
-  raised?: boolean;
-  placeholder?: string;
-  floatingPlaceholder?: boolean;
+  value?: string
+  class?: string
+  disabled?: boolean
+  cols?: number
+  rows?: number
+  resize?: 'horizontal' | 'vertical' | 'both' | 'none'
+  maxLength?: number
+  style?: CSSProperties
+  color?: 'success' | 'error' | 'warning' | 'accent' | 'primary'
+  variant?: 'solid' | 'outlined' | 'text'
+  rounded?: boolean
+  onChange?: QRL<(value: string | undefined) => void>
+  raised?: boolean
+  placeholder?: string
+  floatingPlaceholder?: boolean
 }
 export const TextArea = component$<TextAreaProps>(
   ({
     value,
     disabled,
     class: className,
-    style = {
-      height: "fit-content",
-      width: "fit-content",
-    },
+    style,
     cols = 20,
     rows = 2,
-    resize = "both",
+    resize = 'both',
     maxLength = undefined,
-    variant = "outlined",
-    color = "primary",
+    variant = 'outlined',
+    color = 'primary',
     rounded = false,
     onChange,
     raised,
     placeholder,
     floatingPlaceholder = true,
   }) => {
-    const v = useSignal(value);
+    const v = useSignal<undefined | string>(undefined)
 
     return (
       <div class={className} style={style}>
         <spam
-          class={`cc-textarea-${variant} cc-textarea-${disabled ? "disabled" : color} ${rounded ? "cc-textarea-rounded" : "cc-textarea"} ${raised && "cc-textarea-raised"}`}
+          class={`cc-textarea-${variant} cc-textarea-${disabled ? 'disabled' : color} ${rounded ? 'cc-textarea-rounded' : 'cc-textarea'} ${raised && 'cc-textarea-raised'}`}
         >
-          <Slot name={"left"} />
+          <Slot name={'left'} />
           <textarea
             style={{ resize }}
             disabled={disabled}
             onChange$={$((e) => {
-              v.value = (e.target as any).value;
+              v.value = (e.target as any).value
 
-              onChange && onChange(v.value);
+              onChange && onChange(v.value)
             })}
             placeholder={placeholder}
             cols={cols}
             rows={rows}
             maxLength={maxLength}
-            value={v.value}
+            value={v.value ? v.value : value}
           />
-          <Slot name={"right"} />
+          <Slot name={'right'} />
           {floatingPlaceholder && placeholder && (
             <label
-              class={`cc-textarea-label cc-textarea-${disabled ? "disabled" : color}`}
+              class={`cc-textarea-label cc-textarea-${disabled ? 'disabled' : color}`}
             >
               {placeholder}
             </label>
           )}
         </spam>
       </div>
-    );
-  },
-);
+    )
+  }
+)

@@ -1,26 +1,26 @@
-import type { Meta, StoryObj } from "storybook-framework-qwik";
+import type { Meta, StoryObj } from 'storybook-framework-qwik'
 import {
   ToggleButtonGroup,
   type ToggleButtonGroupProps,
-} from "./toggle-button-group";
-import { $ } from "@builder.io/qwik";
+} from './toggle-button-group'
+import { $ } from '@builder.io/qwik'
 
 const meta: Meta<ToggleButtonGroupProps> = {
   component: ToggleButtonGroup,
-};
+}
 
-type Story = StoryObj<ToggleButtonGroupProps>;
+type Story = StoryObj<ToggleButtonGroupProps>
 
-export default meta;
+export default meta
 
 export const Primary: Story = {
   args: {
     members: [
       {
         id: 0,
-        color: "success",
+        color: 'success',
         onChange: $((value) => {
-          console.log(value);
+          console.log(value)
         }),
         value: true,
       },
@@ -29,27 +29,27 @@ export const Primary: Story = {
     ],
     disabled: false,
     exclusive: false,
-    color: "primary",
+    color: 'primary',
     vertical: false,
     raised: false,
     rounded: false,
-    class: "",
+    class: '',
     style: {
-      height: "fit-content",
-      width: "fit-content",
+      height: 'fit-content',
+      width: 'fit-content',
     },
   },
   argTypes: {
     color: {
-      options: ["success", "error", "warning", "accent", "primary"],
-      control: { type: "radio" },
+      options: ['success', 'error', 'warning', 'accent', 'primary'],
+      control: { type: 'radio' },
     },
   },
   render: (props) => (
     <ToggleButtonGroup {...props}>
-      <h1 q:slot={"0"}>Buttom</h1>
-      <h1 q:slot={"1"}>Buttom</h1>
-      <h1 q:slot={"2"}>Buttom</h1>
+      <h1 q:slot={'0'}>Buttom</h1>
+      <h1 q:slot={'1'}>Buttom</h1>
+      <h1 q:slot={'2'}>Buttom</h1>
     </ToggleButtonGroup>
   ),
-};
+}

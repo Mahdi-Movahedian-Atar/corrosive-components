@@ -7,19 +7,19 @@ import {
   Slot,
   CSSProperties,
   QRL,
-} from "@builder.io/qwik";
+} from '@builder.io/qwik'
 
 export interface ResizablePanelsProps {
-  disabled?: boolean;
-  vertical?: boolean;
-  onChange?: QRL<(offset: number) => void>;
-  min?: number;
-  max?: number;
-  defaultOffset?: number;
-  collapsableLeft?: number;
-  collapsableRight?: number;
-  class?: string;
-  style?: CSSProperties;
+  disabled?: boolean
+  vertical?: boolean
+  onChange?: QRL<(offset: number) => void>
+  min?: number
+  max?: number
+  defaultOffset?: number
+  collapsableLeft?: number
+  collapsableRight?: number
+  class?: string
+  style?: CSSProperties
 }
 
 export const ResizablePanels = component$<ResizablePanelsProps>(
@@ -29,7 +29,7 @@ export const ResizablePanels = component$<ResizablePanelsProps>(
     min = 5,
     max = 95,
     class: className = undefined,
-    style = { height: "100%", width: "100%" },
+    style,
     defaultOffset = 50,
     collapsableLeft = 0,
     collapsableRight = 100,
@@ -38,58 +38,58 @@ export const ResizablePanels = component$<ResizablePanelsProps>(
     const mousePosition = useStore({
       x: defaultOffset,
       y: defaultOffset,
-    });
-    const isMouseDown = useSignal(false);
-    const thisRef = useSignal<Element>();
+    })
+    const isMouseDown = useSignal(false)
+    const thisRef = useSignal<Element>()
 
     const mouseMove = $((event: Event) => {
-      const zoom = ((window.outerWidth - 10) / window.innerWidth) * 100;
+      const zoom = ((window.outerWidth - 10) / window.innerWidth) * 100
 
-      isMouseDown.value && event.preventDefault();
-      const rect = thisRef.value!.getBoundingClientRect();
+      isMouseDown.value && event.preventDefault()
+      const rect = thisRef.value!.getBoundingClientRect()
       isMouseDown.value &&
         (mousePosition.x +=
-          ((event as MouseEvent).movementX / rect.width / zoom) * 10000);
+          ((event as MouseEvent).movementX / rect.width / zoom) * 10000)
       isMouseDown.value &&
         (mousePosition.y +=
-          ((event as MouseEvent).movementY / rect.height / zoom) * 10000);
-      min && mousePosition.x < min && (mousePosition.x = min);
-      max && mousePosition.x > max && (mousePosition.x = max);
-      min && mousePosition.y < min && (mousePosition.y = min);
-      max && mousePosition.y > max && (mousePosition.y = max);
+          ((event as MouseEvent).movementY / rect.height / zoom) * 10000)
+      min && mousePosition.x < min && (mousePosition.x = min)
+      max && mousePosition.x > max && (mousePosition.x = max)
+      min && mousePosition.y < min && (mousePosition.y = min)
+      max && mousePosition.y > max && (mousePosition.y = max)
       onChange &&
-        (vertical ? onChange(mousePosition.y) : onChange(mousePosition.x));
-    });
+        (vertical ? onChange(mousePosition.y) : onChange(mousePosition.x))
+    })
     const TouchMove = $((event: TouchEvent) => {
-      const zoom = ((window.outerWidth - 10) / window.innerWidth) * 100;
+      const zoom = ((window.outerWidth - 10) / window.innerWidth) * 100
 
-      const rect = thisRef.value!.getBoundingClientRect();
-      isMouseDown.value && event.preventDefault();
-      if (event.touches.length == 0) isMouseDown.value = false;
+      const rect = thisRef.value!.getBoundingClientRect()
+      isMouseDown.value && event.preventDefault()
+      if (event.touches.length == 0) isMouseDown.value = false
       isMouseDown.value &&
         (mousePosition.x =
-          ((event.touches[0].clientX - rect.left) / rect.width / zoom) * 10000);
+          ((event.touches[0].clientX - rect.left) / rect.width / zoom) * 10000)
       isMouseDown.value &&
         (mousePosition.y =
-          ((event.touches[0].clientY - rect.top) / rect.height / zoom) * 10000);
-      min && mousePosition.x < min && (mousePosition.x = min);
-      max && mousePosition.x > max && (mousePosition.x = max);
-      min && mousePosition.y < min && (mousePosition.y = min);
-      max && mousePosition.y > max && (mousePosition.y = max);
+          ((event.touches[0].clientY - rect.top) / rect.height / zoom) * 10000)
+      min && mousePosition.x < min && (mousePosition.x = min)
+      max && mousePosition.x > max && (mousePosition.x = max)
+      min && mousePosition.y < min && (mousePosition.y = min)
+      max && mousePosition.y > max && (mousePosition.y = max)
       onChange &&
-        (vertical ? onChange(mousePosition.y) : onChange(mousePosition.x));
-    });
+        (vertical ? onChange(mousePosition.y) : onChange(mousePosition.x))
+    })
     const disableMouse = $(() => {
-      !disabled && (isMouseDown.value = false);
-    });
+      !disabled && (isMouseDown.value = false)
+    })
     const enableMouse = $(() => {
-      !disabled && (isMouseDown.value = true);
-    });
+      !disabled && (isMouseDown.value = true)
+    })
 
-    useOn("mousemove", mouseMove);
-    useOn("touchmove", TouchMove);
-    useOn("mouseup", disableMouse);
-    useOn("touchend", disableMouse);
+    useOn('mousemove', mouseMove)
+    useOn('touchmove', TouchMove)
+    useOn('mouseup', disableMouse)
+    useOn('touchend', disableMouse)
 
     return (
       <div
@@ -101,8 +101,8 @@ export const ResizablePanels = component$<ResizablePanelsProps>(
         <div
           class={
             vertical
-              ? "cc-resizablePanels-parent-vertical"
-              : "cc-resizablePanels-parent"
+              ? 'cc-resizablePanels-parent-vertical'
+              : 'cc-resizablePanels-parent'
           }
         >
           <div
@@ -110,14 +110,14 @@ export const ResizablePanels = component$<ResizablePanelsProps>(
               vertical
                 ? !(collapsableLeft > mousePosition.y)
                   ? mousePosition.y > collapsableRight
-                    ? "height: 100%"
+                    ? 'height: 100%'
                     : `height: ${mousePosition.y}%`
-                  : "display: none"
+                  : 'display: none'
                 : !(collapsableLeft > mousePosition.x)
                   ? mousePosition.x > collapsableRight
-                    ? "width: 100%"
+                    ? 'width: 100%'
                     : `width: ${mousePosition.x}%`
-                  : "display: none"
+                  : 'display: none'
             }
             class={`cc-resizablePanels-firstPanel`}
           >
@@ -127,11 +127,11 @@ export const ResizablePanels = component$<ResizablePanelsProps>(
             class={
               !disabled
                 ? vertical
-                  ? "cc-resizablePanels-draggable-vertical"
-                  : "cc-resizablePanels-draggable"
+                  ? 'cc-resizablePanels-draggable-vertical'
+                  : 'cc-resizablePanels-draggable'
                 : vertical
-                  ? "cc-resizablePanels-vertical-disabled"
-                  : "cc-resizablePanels-disabled"
+                  ? 'cc-resizablePanels-vertical-disabled'
+                  : 'cc-resizablePanels-disabled'
             }
             onMouseDown$={enableMouse}
             onMouseUp$={disableMouse}
@@ -141,8 +141,8 @@ export const ResizablePanels = component$<ResizablePanelsProps>(
             <div
               class={
                 vertical
-                  ? "cc-resizablePanels-content-vertical"
-                  : "cc-resizablePanels-content"
+                  ? 'cc-resizablePanels-content-vertical'
+                  : 'cc-resizablePanels-content'
               }
             />
           </span>
@@ -150,22 +150,22 @@ export const ResizablePanels = component$<ResizablePanelsProps>(
             style={
               vertical
                 ? mousePosition.y > collapsableRight
-                  ? "display: none"
+                  ? 'display: none'
                   : !(collapsableLeft > mousePosition.y)
                     ? `height: ${100 - mousePosition.y}%`
-                    : "height: 100%"
+                    : 'height: 100%'
                 : mousePosition.x > collapsableRight
-                  ? "display: none"
+                  ? 'display: none'
                   : !(collapsableLeft > mousePosition.x)
                     ? `width: ${100 - mousePosition.x}%`
-                    : "height: 100%"
+                    : 'height: 100%'
             }
-            class={"cc-resizablePanels-secondPanel"}
+            class={'cc-resizablePanels-secondPanel'}
           >
             <Slot name="secondPanel" />
           </div>
         </div>
       </div>
-    );
-  },
-);
+    )
+  }
+)

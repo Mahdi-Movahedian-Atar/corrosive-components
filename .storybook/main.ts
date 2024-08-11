@@ -1,22 +1,22 @@
-import { StorybookConfig } from "storybook-framework-qwik";
+import { StorybookConfig } from 'storybook-framework-qwik'
 
 const config: StorybookConfig = {
-  addons: ["@storybook/addon-links", "@storybook/addon-essentials"],
+  addons: ['@storybook/addon-links', '@storybook/addon-essentials'],
   framework: {
-    name: "storybook-framework-qwik",
+    name: 'storybook-framework-qwik',
   },
   core: {
-    renderer: "storybook-framework-qwik",
+    renderer: 'storybook-framework-qwik',
   },
   stories: [
     // ...rootMain.stories,
-    "../src/components/**/*.stories.mdx",
-    "../src/components/**/*.stories.@(js|jsx|ts|tsx)",
+    '../src/components/**/*.stories.mdx',
+    '../src/components/**/*.stories.@(js|jsx|ts|tsx)',
   ],
 
   viteFinal: async (config: any) => {
-    return config;
+    return config
   },
-};
+}
 
-export default config;
+export default config
