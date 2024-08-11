@@ -92,8 +92,5 @@
     "undici": "*",
     "vite": "^5.2.10",
     "vite-tsconfig-paths": "^4.2.1"
-  },
-  "dependencies": {
-    "prettier-plugin-tailwindcss": "^0.6.5"
   }
 }
