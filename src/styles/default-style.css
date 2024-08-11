@@ -237,7 +237,7 @@ body {
   margin: 10%;
   width: 80%;
   height: 80%;
-  mask: url('../icons/Check.svg');
+  mask: url('../../assets/Check.svg');
 }
 
 .cc-toggle-slider {
@@ -3002,42 +3002,42 @@ textarea:placeholder-shown ~ .cc-textarea-label {
 /* ==========================icons========================== */
 
 .cc-shortArrow-down {
-  mask: url('../icons/ShortArrow.svg');
+  mask: url('../../assets/ShortArrow.svg');
 }
 
 .cc-shortArrow-right {
   rotate: -90deg;
-  mask: url('../icons/ShortArrow.svg');
+  mask: url('../../assets/ShortArrow.svg');
 }
 
 .cc-shortArrow-left {
   rotate: 90deg;
-  mask: url('../icons/ShortArrow.svg');
+  mask: url('../../assets/ShortArrow.svg');
 }
 
 .cc-shortArrow-up {
   rotate: 180deg;
-  mask: url('../icons/ShortArrow.svg');
+  mask: url('../../assets/ShortArrow.svg');
 }
 
 .cc-error {
-  mask: url('../icons/Error.svg');
+  mask: url('../../assets/Error.svg');
 }
 
 .cc-cross {
-  mask: url('../icons/Cross.svg');
+  mask: url('../../assets/Cross.svg');
 }
 
 .cc-info {
-  mask: url('../icons/Information.svg');
+  mask: url('../../assets/Information.svg');
 }
 
 .cc-success {
-  mask: url('../icons/Success.svg');
+  mask: url('../../assets/Success.svg');
 }
 
 .cc-warning {
-  mask: url('../icons/Warning.svg');
+  mask: url('../../assets/Warning.svg');
 }
 
 .cc-icon-small,

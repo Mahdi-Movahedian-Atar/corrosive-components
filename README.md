@@ -1,47 +1,20 @@
-# Qwik Library ⚡️
+# Corrosive Components
 
-- [Qwik Docs](https://qwik.dev/)
-- [Discord](https://qwik.dev/chat)
-- [Qwik on GitHub](https://github.com/QwikDev/qwik)
-- [@QwikDev](https://twitter.com/QwikDev)
-- [Vite](https://vitejs.dev/)
-- [Partytown](https://partytown.builder.io/)
-- [Mitosis](https://github.com/BuilderIO/mitosis)
-- [Builder.io](https://www.builder.io/)
+![Corrosive Components Logo](./assets/Corrosive.svg)
+![npm](https://img.shields.io/npm/v/corrosive-components.svg)
+![License](https://img.shields.io/npm/l/corrosive-components.svg)
+![Build Status](https://img.shields.io/github/actions/workflow/status/your-github-username/corrosive-components/ci.yml?branch=main)
 
----
+**Corrosive Components** is a high-performance, fully customizable, and modular component library for the Qwik framework. Designed with flexibility in mind, each component in this library is self-contained and does not depend on any other component or external package. You can easily customize components using CSS variables to fit your unique design needs.
 
-## Project Structure
+## Features
 
-Inside your project, you'll see the following directories and files:
+- **Independent Components**: Each component works standalone without needing other components or dependencies.
+- **CSS Customization**: Customize components using CSS variables for complete control over design and appearance.
+- **TypeScript Support**: Fully typed components, ensuring a robust development experience.
+## Installation
 
-```
-├── public/
-│   └── ...
-└── src/
-    ├── components/
-    │   └── ...
-    └── index.ts
-```
+To install the library in your Qwik project, use:
 
-- `src/components`: Recommended directory for components.
-
-- `index.ts`: The entry point of your component library, make sure all the public components are exported from this file.
-
-## Development
-
-Development mode uses [Vite's development server](https://vitejs.dev/). For Qwik during development, the `dev` command will also server-side render (SSR) the output. The client-side development modules are loaded by the browser.
-
-```
-bun dev
-```
-
-> Note: during dev mode, Vite will request many JS files, which does not represent a Qwik production build.
-
-## Production
-
-The production build should generate the production build of your component library in (./lib) and the typescript type definitions in (./lib-types).
-
-```
-bun build
-```
+```bash
+npm install corrosive-components
