@@ -1,11 +1,11 @@
 {
   "name": "corrosive-components",
-  "version": "1.0.2",
-  "description": "Create a Qwik library",
+  "version": "1.0.3",
+  "description": "Qwik library",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Mahdi-Movahedian-Atar/corrosive-components.git"
+    "url": "https://github.com/Mahdi-Movahedian-Atar/corrosive-components.git",
   },
   "keywords": [
     "qwik",
@@ -34,6 +34,7 @@
     "SSR",
     "client-side rendering"
   ],
+  "homepage": "https://github.com/Mahdi-Movahedian-Atar/corrosive-components/wiki",
   "author": "Mahdi Movahedian Atar",
   "main": "./lib/index.qwik.mjs",
   "qwik": "./lib/index.qwik.mjs",
