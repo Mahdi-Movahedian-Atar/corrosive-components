@@ -8,7 +8,7 @@
 
 **Corrosive Components** is a high-performance, fully customizable, and modular component library for the Qwik framework. Designed with flexibility in mind, each component in this library is self-contained and does not depend on any other component or external package. You can easily customize components using CSS variables to fit your unique design needs.
 
-[Docs](https://github.com/Mahdi-Movahedian-Atar/corrosive-components/wiki)
+[Docs](https://corrosive.dev/docs/installation/installation/)
 
 ## Features
 
