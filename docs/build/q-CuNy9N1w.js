@@ -1,1 +1,0 @@
-import{T as C,a as l,C as r}from"./q-DEXM_qHp.js";import{x as i,d}from"./q-8bdPC3mX.js";import"./q-uemlvruI.js";const _=({nodes:e,toggleComponent:s=l,contentComponent:n=r,disableAll:t=!1,class:a,style:m,onSelect:p})=>i("div",{class:a,style:m},null,e.map(o=>d(C,{node:o,ToggleComponent:s,ContentComponent:n,isDisabled:t,onSelect:p},3,o.id)),1,"TC_6");export{_ as s_OQL2wOKMLho};

@@ -1,1 +1,1 @@
-import{s as m}from"./q-8bdPC3mX.js";const i=(t,o,s="primary",e="solid",r)=>{const n=new Date().getTime().toString(),a={message:o,color:s,variant:e,duration:r};return[...t,{id:n,toastMessage:a}]};export{m as _hW,i as s_0X0WXnlWDYo};
+import{s as m}from "./q-8bdPC3mX.js";const i=(t, o, s="primary", e="solid", r)=>{const n=new Date().getTime().toString(),a={message:o,color:s,variant:e,duration:r};return[...t,{id:n,toastMessage:a}]};export{m as _hW,i as s_0X0WXnlWDYo};

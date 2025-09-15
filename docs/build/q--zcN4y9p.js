@@ -1,0 +1,1 @@
+import{_ as i}from "./q-DXM0pR1l.js";import{H as n,q as a}from "./q-8bdPC3mX.js";function _(t){const r=t.toString().match(/\.(\d+)$/);return r?r[1].length:0}function c(t, r, o, e){return o===0?t:parseFloat((Math.round(t/o)*o).toFixed(e))}const d=n(a(()=>i(()=>import("./q-BzREEf2K.js"),[]),"s_qWiqwPmoJR4"));export{d as S,_ as g,c as r};

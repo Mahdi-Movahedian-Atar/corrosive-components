@@ -1,1 +1,1 @@
-import{x as s}from"./q-8bdPC3mX.js";const o=r=>s("i",{class:`${r.isExpanded?"cc-shortArrow-down":"cc-shortArrow-left"} cc-icon-small`},{style:{marginRight:".5rem"}},null,3,"Zl_0");export{o as s_5RAksFc7wqg};
+import{x as s}from "./q-8bdPC3mX.js";const o= r=>s("i",{class:`${r.isExpanded?"cc-shortArrow-down":"cc-shortArrow-left"} cc-icon-small`},{style:{marginRight:".5rem"}},null,3,"Zl_0");export{o as s_5RAksFc7wqg};

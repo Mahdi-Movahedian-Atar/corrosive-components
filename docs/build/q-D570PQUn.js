@@ -1,0 +1,1 @@
+import{f as C,h as r,C as i}from "./q-CWPa9I8b.js";import{x as l,d}from "./q-8bdPC3mX.js";import"./q-DXM0pR1l.js";const c=({nodes:s,toggleComponent:e=r,contentComponent:n=i,disableAll:t=!1,class:m,style:a,onSelect:p})=>l("div",{class:m,style:a},null,s.map(o=>d(C,{node:o,ToggleComponent:e,ContentComponent:n,isDisabled:t,onSelect:p},3,o.id)),1,"Zl_6");export{c as s_Qi1PY3kkCes};
