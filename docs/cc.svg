@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="1920"
+   height="1080"
+   viewBox="0 0 1920 1080"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)"
+   sodipodi:docname="cc.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#505050"
+     inkscape:document-units="px"
+     inkscape:zoom="0.52916667"
+     inkscape:cx="742.67717"
+     inkscape:cy="543.30709"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1">
+    <rect
+       x="366.13655"
+       y="5.3867187"
+       width="1262.383"
+       height="686.79844"
+       id="rect17" />
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect12"
+       is_visible="true"
+       lpeversion="1.3"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false"
+       uniform="false" />
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect9"
+       is_visible="true"
+       lpeversion="1.3"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false"
+       uniform="false" />
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect8"
+       is_visible="true"
+       lpeversion="1.3"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false"
+       uniform="false" />
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect7"
+       is_visible="true"
+       lpeversion="1.3"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false"
+       uniform="false" />
+    <inkscape:path-effect
+       effect="bspline"
+       id="path-effect6"
+       is_visible="true"
+       lpeversion="1.3"
+       weight="33.333333"
+       steps="2"
+       helper_size="0"
+       apply_no_weight="true"
+       apply_with_weight="true"
+       only_selected="false"
+       uniform="false" />
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       d="m 434.52734,786.62891 c 79.00265,-8.5e-4 143.04882,64.46769 143.04883,143.99218 -1e-5,79.52451 -64.04618,143.99301 -143.04883,143.99221 h 1050.94536 286.0937 c 79.002,-3e-4 143.0469,-64.4683 143.0469,-143.99221 0,-79.52388 -64.0449,-143.99195 -143.0469,-143.99218 h -143.0469 -143.0468 z"
+       style="fill:none;stroke:#000000;stroke-width:10.7719;stroke-linecap:round;stroke-linejoin:round"
+       id="path17" />
+    <path
+       d="M 148.43359,5.3867187 A 143.0473,143.9922 0 0 0 5.3867187,149.37891 143.0473,143.9922 0 0 0 148.43359,293.37109 143.0473,143.9922 0 0 0 291.48047,149.37891 143.0473,143.9922 0 0 0 148.43359,5.3867187 Z"
+       style="fill:none;stroke:#000000;stroke-width:10.7719;stroke-linecap:round;stroke-linejoin:round"
+       id="path15" />
+    <path
+       d="M 148.43359,5.3867187 C 227.43579,5.3869563 291.48046,69.85486 291.48047,149.37891 v 781.24218 c 10e-6,-79.5242 64.04452,-143.99195 143.04687,-143.99218 H 1628.5195 v -637.25 c 0,-79.524368 -64.0443,-143.9919537 -143.0468,-143.9921913 H 434.52734 Z"
+       style="fill:none;stroke:#000000;stroke-width:10.7719;stroke-linecap:round;stroke-linejoin:round"
+       id="path14" />
+    <path
+       d="M 434.52734,1074.6133 A 143.0473,143.9922 0 0 0 577.57617,930.62109 143.0473,143.9922 0 0 0 434.52734,786.62891 143.0473,143.9922 0 0 0 291.48047,930.62109 143.0473,143.9922 0 0 0 434.52734,1074.6133 Z"
+       style="fill:none;stroke:#000000;stroke-width:10.7719;stroke-linecap:round;stroke-linejoin:round"
+       id="path16" />
+    <text
+       xml:space="preserve"
+       id="text17"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:32px;line-height:2.3;font-family:Arial;-inkscape-font-specification:Arial;white-space:pre;shape-inside:url(#rect17);shape-padding:77.5034;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.871356;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"
+       transform="matrix(1.2050177,0,0,1.2050177,-219.45812,22.118776)"><tspan
+         x="443.64062"
+         y="128.51477"
+         id="tspan1">Three corrosive commitments
+</tspan><tspan
+         x="443.64062"
+         y="202.11477"
+         id="tspan2">
+</tspan><tspan
+         x="443.64062"
+         y="275.71478"
+         id="tspan3"> 1. All components shall be independent of each other and any other     </tspan><tspan
+         x="443.64062"
+         y="349.31478"
+         id="tspan4">dependencies.
+</tspan><tspan
+         x="443.64062"
+         y="422.91479"
+         id="tspan5"> 2. The source code of all components shall be easily available, usable, and </tspan><tspan
+         x="443.64062"
+         y="496.5148"
+         id="tspan6">understandable.
+</tspan><tspan
+         x="443.64062"
+         y="570.1148"
+         id="tspan7"> 3. All components shall be customizable with a unified process.</tspan></text>
+  </g>
+</svg>

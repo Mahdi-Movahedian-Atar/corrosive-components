@@ -1,0 +1,1 @@
+import{x as s}from"./q-8bdPC3mX.js";import{s as e}from"./q-8bdPC3mX.js";const t=r=>s("i",{class:`${r.isExpanded?"cc-shortArrow-down":"cc-shortArrow-left"} cc-icon-small`},{style:{marginRight:".5rem"}},null,3,"TC_0");export{e as _hW,t as s_4XnChLQg4BQ};
